@@ -71,7 +71,7 @@ def my_document(message):
         who_to_send_id = dbhelper.get_user_id(message.reply_to_message.message_id)
         if who_to_send_id:
             # bot.send_chat_action(who_to_send_id, "upload_document")
-            bot.send_document(who_to_send_id, data=message.document.file_id)
+            bot.send_document(who_to_send_id, str(message.document.file_id))
     else:
         bot.send_message(message.chat.id, "No one to reply!")
 
