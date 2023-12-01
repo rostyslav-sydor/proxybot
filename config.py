@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-
+import os
 # Bot's token. Obtain yours from https://telegram.me/botfather
-token = "TOKEN"
+token = os.environ.get('TOKEN')
 
 
 storage_name = "StorageUser"
@@ -15,7 +15,7 @@ storage_namelist = 'txtfiles/namelist.txt'
 storage_fnamelist = 'txtfiles/fnamelist.txt'
 storage_blockmsg = 'txtfiles/blockmsg.txt'
 # Your own chat id. Ask https://telegram.me/my_id_bot to tell you yours
-my_id = yourid
+my_id = int(os.environ.get('MY_ID'))
 
 '''
 Here are things you should know:
