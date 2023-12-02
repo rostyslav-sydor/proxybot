@@ -13,7 +13,7 @@ bot = telebot.TeleBot(config.token)
 # Handle always first "/start" message when new chat with your bot is created
 @bot.message_handler(commands=["start"])
 def command_start(message):
-    bot.send_message(message.chat.id, "Hello! Now please write your message to forward it to my owner!")
+    bot.send_message(message.chat.id, "привіт, які тестики вам треба?")
 
 
 @bot.message_handler(func=lambda message: message.chat.id == config.my_id, content_types=["text"])
